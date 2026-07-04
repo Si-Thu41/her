@@ -52,7 +52,7 @@ export default function BirdhouseClock() {
       <div className="flex flex-col items-center">
         <svg
           viewBox="0 0 320 400"
-          className="w-4/5 drop-shadow-xl"
+          className="w-full drop-shadow-xl"
           role="img"
           aria-label="A birdhouse-shaped analog clock with a heart entrance"
         >
