@@ -35,7 +35,8 @@ export default function App() {
   },[])
 
   return (
-<div className="flex flex-col min-h-screen bg-cover bg-center bg-[linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.1)),url(/background.jpg)]">        <div className="relative  flex-1" >
+<div className="flex flex-col min-h-[100dvh] bg-cover bg-center bg-[linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.1)),url(/background.jpg)]">        
+<div className="relative  flex-1" >
    
     {bubbles.map(bubble => (
       <div key={bubble.id} className="fixed pointer-events-none text-2xl  px-2 py-1 rounded-full animate-bubble-up " style={{left: bubble.x, top: bubble.y}}>
