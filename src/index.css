@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@keyframes bubble-up {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+}
+
+.animate-bubble-up {
+  animation: bubble-up 1s ease-out forwards;
+}
+
+
+.dancing-script {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
