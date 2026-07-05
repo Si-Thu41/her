@@ -35,24 +35,30 @@ export default function App() {
   },[])
 
   return (
-<div className="relative flex flex-col min-h-[100dvh] bg-cover bg-center bg-[linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.1)),url(/background.jpg)]">        
+<div className="relative flex flex-col min-h-dvh bg-cover bg-center bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.5)),url(/background.jpg)]">        
 <div className="  flex-1" >
    
     {bubbles.map(bubble => (
       <div key={bubble.id} className="fixed pointer-events-none text-2xl  px-2 py-1 rounded-full animate-bubble-up " style={{left: bubble.x, top: bubble.y}}>
-        🩷
+        ❤️
       </div>
     ))}
     <Profile />
-    
+    <div className="lg:w-1/4 w-3/4 mx-auto rounded-2xl overflow-hidden mt-4">
+    <img src="cats-in-love-love.gif" />
+       </div>
    
   </div>
    <footer>
-      <p className="text-center text-white opacity-75 text-lg">
+      <p className="text-center text-white opacity-75 text-lg xl:hidden">
+        Tab the screen
+      </p>
+      <p className="text-center text-white opacity-75 text-lg hidden xl:block">
         Swipe the screen
       </p>
+      
     </footer>
-    <div className="absolute top-0 left-0 lg:w-1/2 w-1/3">
+    <div className="absolute top-0 left-0 lg:w-1/3 w-3/10">
     <BirdhouseClock />
     </div>
     </div>

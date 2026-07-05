@@ -12,7 +12,7 @@ export default function BirdhouseClock() {
   const minutes = now.getMinutes() + seconds / 60;
   const hours = (now.getHours() % 12) + minutes / 60;
 
-  const secDeg = seconds * 6;
+  const secDeg = seconds > 0 ? seconds * 6 : 360;
   const minDeg = minutes * 6;
   const hourDeg = hours * 30;
 
@@ -121,15 +121,15 @@ export default function BirdhouseClock() {
             x1={cx} y1={cy} x2={cx} y2={cy - 38}
             stroke="#8B3A4A" strokeWidth="5" strokeLinecap="round"
             transform={`rotate(${hourDeg} ${cx} ${cy})`}
-            className="transition-transform duration-300 ease-out"
+            className="transition-transform duration-300 ease-in"
           />
           <line
             x1={cx} y1={cy} x2={cx} y2={cy - 55}
             stroke="#B96B4C" strokeWidth="3.2" strokeLinecap="round"
             transform={`rotate(${minDeg} ${cx} ${cy})`}
-            className="transition-transform duration-300 ease-out"
+            className="transition-transform duration-300 ease-in"
           />
-          <g transform={`rotate(${secDeg} ${cx} ${cy})`} className="transition-transform duration-300 ease-out">
+          <g transform={`rotate(${secDeg} ${cx} ${cy})`} className="transition-transform duration-300 ">
             <line x1={cx} y1={cy + 10} x2={cx} y2={cy - 58} stroke="#C9576B" strokeWidth="1.4" />
             <path
               d={`M${cx},${cy - 63} c-2,-3 -6,-3 -6,1 c0,3 6,7 6,9 c0,-2 6,-6 6,-9 c0,-4 -4,-4 -6,-1 Z`}
