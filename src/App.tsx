@@ -44,7 +44,7 @@ export default function App() {
       </div>
     ))}
     <Profile />
-    <div className="lg:w-1/4 w-3/4 mx-auto rounded-2xl overflow-hidden mt-4">
+    <div className="lg:w-1/4 w-1/2 mx-auto flex justify-center rounded-2xl overflow-hidden mt-4">
     <img src="cats-in-love-love.gif" />
        </div>
    
